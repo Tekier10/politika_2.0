@@ -15,7 +15,7 @@ export default function Home() {
           <h1 className="text-xl font-bold">Politika 2.0</h1>
         </div>
         <a href="#manifest" className="text-sm text-blue-600 hover:underline">
-          Přejít na manifest
+          Přejít na manifest..
         </a>
       </header>
 
