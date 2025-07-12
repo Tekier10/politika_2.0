@@ -1,35 +1,59 @@
+
 import Head from 'next/head';
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-gray-100 text-gray-900">
+    <div className="min-h-screen bg-gradient-to-br from-gray-100 to-white text-gray-900 flex flex-col">
       <Head>
         <title>Politika 2.0</title>
         <meta name="description" content="Politika, která myslí." />
       </Head>
-      <main className="flex flex-col items-center justify-center py-16 px-4">
-        <img src="/logo.png" alt="Politika 2.0 logo" className="w-32 mb-6" />
-        <h1 className="text-4xl font-bold text-center">Politika 2.0</h1>
-        <p className="mt-4 text-center max-w-xl">
-          Politika založená na datech, otevřenosti a participaci. Přepisujeme pravidla systému tak, aby fungoval pro všechny – transparentně, efektivně a s důrazem na realitu.
+
+      <header className="flex items-center justify-between px-6 py-4 border-b shadow-sm bg-white sticky top-0 z-10">
+        <div className="flex items-center space-x-2">
+          <img src="/logo.png" alt="Logo" className="w-10 h-10" />
+          <h1 className="text-xl font-bold">Politika 2.0</h1>
+        </div>
+        <a href="#manifest" className="text-sm text-blue-600 hover:underline">
+          Přejít na manifest
+        </a>
+      </header>
+
+      <main className="flex-grow flex flex-col items-center justify-center px-6 py-16 text-center">
+        <h1 className="text-5xl font-extrabold leading-tight mb-6 max-w-2xl">
+          Politika, která myslí.  
+        </h1>
+        <p className="text-lg text-gray-700 max-w-xl mb-8">
+          Přepisujeme fungování veřejné správy. Na základě dat, otevřenosti a reálné participace.  
         </p>
-        <a href="#manifest" className="mt-6 px-6 py-3 bg-black text-white rounded-xl hover:bg-gray-800 transition">Zjistit víc</a>
+        <a
+          href="#manifest"
+          className="inline-flex items-center px-6 py-3 bg-blue-600 text-white rounded-full text-lg font-medium hover:bg-blue-700 shadow-md transition"
+        >
+          📖 Zobrazit manifest
+        </a>
       </main>
 
-      <section id="manifest" className="py-20 px-6 bg-white">
-        <div className="max-w-3xl mx-auto">
-          <h2 className="text-2xl font-semibold mb-4">Manifest</h2>
-          <p className="mb-4">
-            Politika se odpojila od reality. Rozhodnutí se dělají pocitem, ne fakty. Stát funguje, jako kdyby 21. století nezačalo.
-          </p>
-          <p className="mb-4">
-            Politika 2.0 je návrat k racionálnímu, otevřenému a férovému systému. Chceme politiku založenou na datech, transparentnost v reálném čase a účast občanů jako spolutvůrců.
-          </p>
-          <p>
-            Politika může být jako open-source projekt. My ho chceme začít psát.
-          </p>
+      <section id="manifest" className="px-6 py-20 bg-gray-50 border-t">
+        <div className="max-w-3xl mx-auto space-y-6">
+          <h2 className="text-3xl font-bold text-center">Manifest</h2>
+          <div className="bg-white shadow-md rounded-xl p-6 space-y-4">
+            <p>
+              Politika se odpojila od reality. Rozhodnutí se dělají pocitem, ne fakty. Stát funguje, jako kdyby 21. století nezačalo.
+            </p>
+            <p>
+              Politika 2.0 je návrat k racionálnímu, otevřenému a férovému systému. Chceme politiku založenou na datech, transparentnost v reálném čase a účast občanů jako spolutvůrců.
+            </p>
+            <p>
+              Politika může být jako open-source projekt. My ho chceme začít psát.
+            </p>
+          </div>
         </div>
       </section>
+
+      <footer className="text-sm text-center text-gray-500 py-6 border-t mt-auto">
+        © {new Date().getFullYear()} Politika 2.0 – otevřený návrh pro budoucnost veřejné správy.
+      </footer>
     </div>
   );
 }
