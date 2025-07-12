@@ -24,7 +24,7 @@ export default function Home() {
           Politika, která myslí a která se rozvíjí. 
         </h1>
         <p className="text-lg text-gray-700 max-w-xl mb-8">
-          Přepisujeme fungování veřejné správy. Na základě dat, otevřenosti a reálné participace.  
+          Přepisujeme fungování veřejné správy. Na základě dat, otevřenosti a reálné participace občanů.  
         </p>
         <a
           href="#manifest"
