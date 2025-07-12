@@ -12,7 +12,7 @@ export default function Home() {
       <header className="flex items-center justify-between px-6 py-4 border-b shadow-sm bg-white sticky top-0 z-10">
         <div className="flex items-center space-x-2">
           <img src="/logo.png" alt="Logo" className="w-10 h-10" />
-          <h1 className="text-xl font-bold">Politika 2.0</h1>
+          <h1 className="text-xl font-bold">POLITIKA 2.0</h1>
         </div>
         <a href="#manifest" className="text-sm text-blue-600 hover:underline">
           Přejít na manifest
