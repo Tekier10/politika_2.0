@@ -5,7 +5,7 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-100 to-white text-gray-900 flex flex-col">
       <Head>
-        <title>Politika 2.0</title>
+        <title>POLITIKA 2.0</title>
         <meta name="description" content="Politika, která myslí." />
       </Head>
 
