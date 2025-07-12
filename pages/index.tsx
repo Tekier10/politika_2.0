@@ -21,7 +21,7 @@ export default function Home() {
 
       <main className="flex-grow flex flex-col items-center justify-center px-6 py-16 text-center">
         <h1 className="text-5xl font-extrabold leading-tight mb-6 max-w-2xl">
-          Politika, která myslí a která se rozvíjí. 
+           Přišel čas na upgrade...
         </h1>
         <p className="text-lg text-gray-700 max-w-xl mb-8">
           Přepisujeme fungování veřejné správy. Na základě dat, otevřenosti a reálné participace občanů. XXXX2
