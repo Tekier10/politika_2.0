@@ -16,7 +16,7 @@ export default function Header() {
           <a href="#manifest" className="text-sm text-blue-600 hover:underline">
             Manifest
           </a>
-          <a href="#data" className="text-sm text-blue-600 hover:underline">
+          <a href="/data" className="text-sm text-blue-600 hover:underline">
             Data
           </a>
         </nav>
