@@ -11,7 +11,7 @@ export default function Header() {
         </div>
         <nav className="space-x-4">
           <Link
-            href="/#manifest"
+            href="/manifest"
             className="text-sm text-blue-600 hover:bg-blue-100 hover:text-blue-800 px-3 py-1 rounded transition"
           >
             Manifest
