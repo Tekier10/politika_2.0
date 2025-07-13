@@ -36,7 +36,7 @@ export default function DataPage() {
         <title>Data – Politika 2.0</title>
         <meta name="description" content="Interaktivní přehled dat veřejné správy." />
       </Head>
-
+      <Header />
       <main className="min-h-screen bg-white text-gray-900 px-6 py-12 space-y-16">
         <div className="max-w-5xl mx-auto">
           <div className="flex justify-between items-center mb-8">
