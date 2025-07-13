@@ -3,21 +3,8 @@ import Head from 'next/head';
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-100 to-white text-gray-900 flex flex-col">
-      <Head>
-        <title>POLITIKA 2.0</title>
-        <meta name="description" content="Politika, která myslí." />
-      </Head>
-
-      <header className="flex items-center justify-between px-6 py-4 border-b shadow-sm bg-white sticky top-0 z-10">
-        <div className="flex items-center space-x-2">
-          <img src="/logo.png" alt="Logo" className="w-10 h-10" />
-          <h1 className="text-xl font-bold">POLITIKA 2.0</h1>
-        </div>
-        <a href="#manifest" className="text-sm text-blue-600 hover:underline">
-          Přejít na manifest
-        </a>
-      </header>
+    <div className="min-h-screen flex flex-col">
+      <Header />
 
       <main className="flex-grow flex flex-col items-center justify-center px-6 py-16 text-center">
         <h1 className="text-5xl font-extrabold leading-tight mb-6 max-w-2xl">
