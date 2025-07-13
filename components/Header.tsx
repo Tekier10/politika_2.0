@@ -13,7 +13,7 @@ export default function Header() {
 
         {/* Desktop nav */}
         <nav className="hidden md:flex space-x-4">
-          <a href="#manifest" className="text-sm text-blue-600 hover:underline">
+          <a href="/manifest" className="text-sm text-blue-600 hover:underline">
             Manifest
           </a>
           <a href="/data" className="text-sm text-blue-600 hover:underline">
