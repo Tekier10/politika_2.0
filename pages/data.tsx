@@ -42,9 +42,6 @@ export default function DataPage() {
         <div className="max-w-5xl mx-auto">
           <div className="flex justify-between items-center mb-8">
             <h1 className="text-4xl font-bold">Veřejná data</h1>
-            <Link href="/" className="text-blue-600 hover:underline text-sm">
-              ← Zpět na domovskou stránku
-            </Link>
           </div>
 
           {/* Sloupcový graf */}
