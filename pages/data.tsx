@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import Head from 'next/head';
 import Header from '../components/Header';
 import {
@@ -18,7 +19,33 @@ import {
 
 const COLORS = ['#3B82F6', '#60A5FA', '#93C5FD', '#BFDBFE', '#DBEAFE'];
 
+const dataByYear = {
+  2021: [
+    { name: 'Praha', rozpočet: 70 },
+    { name: 'Středočeský', rozpočet: 50 },
+    { name: 'Jihomoravský', rozpočet: 45 },
+    { name: 'Moravskoslezský', rozpočet: 42 },
+    { name: 'Plzeňský', rozpočet: 33 },
+  ],
+  2022: [
+    { name: 'Praha', rozpočet: 75 },
+    { name: 'Středočeský', rozpočet: 55 },
+    { name: 'Jihomoravský', rozpočet: 48 },
+    { name: 'Moravskoslezský', rozpočet: 44 },
+    { name: 'Plzeňský', rozpočet: 38 },
+  ],
+  2023: [
+    { name: 'Praha', rozpočet: 85 },
+    { name: 'Středočeský', rozpočet: 60 },
+    { name: 'Jihomoravský', rozpočet: 55 },
+    { name: 'Moravskoslezský', rozpočet: 52 },
+    { name: 'Plzeňský', rozpočet: 40 },
+  ],
+};
+
 export default function DataPage() {
+  const [selectedYear, setSelectedYear] = useState(2023);
+
   return (
     <div className="min-h-screen bg-gray-50 text-gray-900">
       <Head>
@@ -29,15 +56,22 @@ export default function DataPage() {
 
       <main className="max-w-5xl mx-auto px-6 py-12 space-y-16">
         <section>
-          <h2 className="text-2xl font-bold mb-4">Rozpočty krajů (2023)</h2>
+          <h2 className="text-2xl font-bold mb-4">Rozpočty krajů ({selectedYear})</h2>
+          <div className="mb-4">
+            <label htmlFor="year" className="mr-2 font-medium">Vyber rok:</label>
+            <select
+              id="year"
+              className="border px-2 py-1 rounded"
+              value={selectedYear}
+              onChange={(e) => setSelectedYear(parseInt(e.target.value))}
+            >
+              <option value={2021}>2021</option>
+              <option value={2022}>2022</option>
+              <option value={2023}>2023</option>
+            </select>
+          </div>
           <ResponsiveContainer width="100%" height={300}>
-            <BarChart data={[
-              { name: 'Praha', rozpočet: 85 },
-              { name: 'Středočeský', rozpočet: 60 },
-              { name: 'Jihomoravský', rozpočet: 55 },
-              { name: 'Moravskoslezský', rozpočet: 52 },
-              { name: 'Plzeňský', rozpočet: 40 },
-            ]}>
+            <BarChart data={dataByYear[selectedYear]}>
               <CartesianGrid strokeDasharray="3 3" />
               <XAxis dataKey="name" />
               <YAxis />
