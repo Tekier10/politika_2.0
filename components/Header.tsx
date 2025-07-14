@@ -1,15 +1,20 @@
 import { useState } from 'react';
-
+import Link from 'next/link';
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
     <>
       <header className="flex items-center justify-between px-6 py-4 border-b shadow-sm bg-white sticky top-0 z-10">
-        <div className="flex items-center space-x-2">
+        
+        <Link href="/" className="flex items-center space-x-2 hover:opacity-90 transition">
+        <img src="/logo.png" alt="Logo" className="w-10 h-10" />
+        <span className="text-xl font-bold text-gray-800">Politika 2.0</span>
+        </Link>
+        {/* <div className="flex items-center space-x-2">
           <img src="/logo.png" alt="Logo" className="w-10 h-10" />
           <h1 className="text-xl font-bold">Politika 2.0</h1>
-        </div>
+        </div> */}
 
         {/* Desktop nav */}
         <nav className="hidden md:flex space-x-4">
