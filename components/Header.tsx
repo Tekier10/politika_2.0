@@ -7,9 +7,11 @@ export default function Header() {
     <>
       <header className="flex items-center justify-between px-6 py-4 border-b shadow-sm bg-white sticky top-0 z-10">
         
-        <Link href="/" className="flex items-center space-x-2 hover:opacity-90 transition">
+        <Link href="/" legacyBehavior>
+        <a className="flex items-center space-x-2 hover:opacity-90 transition">
         <img src="/logo.png" alt="Logo" className="w-10 h-10" />
         <span className="text-xl font-bold text-gray-800">Politika 2.0</span>
+        </a>
         </Link>
         {/* <div className="flex items-center space-x-2">
           <img src="/logo.png" alt="Logo" className="w-10 h-10" />
