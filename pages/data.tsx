@@ -82,7 +82,7 @@ export default function DataPage() {
             <ResponsiveContainer width="100%" height={400}>
               <PieChart>
                 <Tooltip />
-                <Legend verticalAlign="right" layout="vertical" />
+                <Legend align="right" verticalAlign="middle" layout="vertical" />
                 <Pie
                   data={[
                     { name: 'Školství', value: 24 },
