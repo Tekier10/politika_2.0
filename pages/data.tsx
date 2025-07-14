@@ -1,10 +1,9 @@
-import Header from '../components/Header';
 import Head from 'next/head';
 import Link from 'next/link';
 import {
   BarChart, Bar, XAxis, YAxis, Tooltip,
   ResponsiveContainer, CartesianGrid, Legend,
-  LineChart, Line
+  LineChart, Line, PieChart, Pie
 } from 'recharts';
 
 const dataRozpocty = [
@@ -37,11 +36,14 @@ export default function DataPage() {
         <title>Data – Politika 2.0</title>
         <meta name="description" content="Interaktivní přehled dat veřejné správy." />
       </Head>
-      <Header />
+
       <main className="min-h-screen bg-white text-gray-900 px-6 py-12 space-y-16">
         <div className="max-w-5xl mx-auto">
           <div className="flex justify-between items-center mb-8">
             <h1 className="text-4xl font-bold">Veřejná data</h1>
+            <Link href="/" className="text-blue-600 hover:underline text-sm">
+              ← Zpět na domovskou stránku
+            </Link>
           </div>
 
           {/* Sloupcový graf */}
@@ -60,7 +62,7 @@ export default function DataPage() {
           </section>
 
           {/* Line graf */}
-          <section>
+          <section className="mb-16">
             <h2 className="text-2xl font-semibold mb-4">Počet schválených zákonů (2014–2023)</h2>
             <ResponsiveContainer width="100%" height={400}>
               <LineChart data={dataZakon} margin={{ top: 20, right: 30, left: 0, bottom: 5 }}>
@@ -73,6 +75,35 @@ export default function DataPage() {
               </LineChart>
             </ResponsiveContainer>
           </section>
+
+          {/* Doughnut graf */}
+          <section>
+            <h2 className="text-2xl font-semibold mb-4">Struktura výdajů státního rozpočtu (2023)</h2>
+            <ResponsiveContainer width="100%" height={400}>
+              <PieChart>
+                <Tooltip />
+                <Legend verticalAlign="right" layout="vertical" />
+                <Pie
+                  data={[
+                    { name: 'Školství', value: 24 },
+                    { name: 'Zdravotnictví', value: 19 },
+                    { name: 'Sociální dávky', value: 28 },
+                    { name: 'Obrana', value: 14 },
+                    { name: 'Infrastruktura', value: 15 }
+                  ]}
+                  dataKey="value"
+                  nameKey="name"
+                  cx="50%"
+                  cy="50%"
+                  outerRadius={120}
+                  innerRadius={70}
+                  fill="#60a5fa"
+                  label
+                />
+              </PieChart>
+            </ResponsiveContainer>
+          </section>
+
         </div>
       </main>
     </>
