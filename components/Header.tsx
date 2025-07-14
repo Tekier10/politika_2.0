@@ -46,10 +46,10 @@ export default function Header() {
       {/* Mobile nav menu */}
       {menuOpen && (
         <div className="md:hidden bg-white border-b shadow px-6 py-4 space-y-2">
-          <a href="#manifest" className="block text-blue-600 hover:underline">
+          <a href="/manifest" className="block text-blue-600 hover:underline">
             Manifest
           </a>
-          <a href="#data" className="block text-blue-600 hover:underline">
+          <a href="/data" className="block text-blue-600 hover:underline">
             Data
           </a>
         </div>
