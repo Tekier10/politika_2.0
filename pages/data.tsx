@@ -71,7 +71,7 @@ export default function DataPage() {
             </select>
           </div>
           <ResponsiveContainer width="100%" height={300}>
-            <BarChart data={dataByYear[selectedYear as 2021 | 2022 | 2023]}>
+            <BarChart data={dataByYear[selectedYear.toString() as unknown as keyof typeof dataByYear]}>
               <CartesianGrid strokeDasharray="3 3" />
               <XAxis dataKey="name" />
               <YAxis />
